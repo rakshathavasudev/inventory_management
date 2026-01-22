@@ -54,7 +54,7 @@ export default function App() {
             justifyContent: "space-between",
           }}
         >
-          <div style={{ fontWeight: 700 }}>MiniCronk</div>
+          <div style={{ fontWeight: 700 }}>Shipify</div>
 
           <nav>
             <NavLink to="/" label="Create Order" />

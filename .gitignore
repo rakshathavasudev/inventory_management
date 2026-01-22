@@ -1,0 +1,54 @@
+# Environment variables
+.env
+backend/.env
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+
+# Generated files
+mockups/*.png
+mockups/*.jpg
+mockups/*.html
+labels/*.pdf
+labels/*.txt
+uploads/*.png
+uploads/*.jpg
+uploads/*.jpeg
+uploads/*.gif
+
+# Node modules (if any)
+node_modules/
+
+# Go build files
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work

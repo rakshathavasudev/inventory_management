@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Mockup - Order 3</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 20px; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .mockup-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+        }
+        .product-outline {
+            width: 300px;
+            height: 350px;
+            margin: 20px auto;
+            border: 3px solid #333;
+            border-radius: 20px;
+            position: relative;
+            background: #718096;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+        }
+        .design-area {
+            width: 180px;
+            height: 120px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border: 2px solid rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .ai-badge {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: inline-block;
+            font-weight: 600;
+        }
+        .prompt-display {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            font-style: italic;
+            color: #666;
+            border-left: 4px solid #4ecdc4;
+        }
+        .product-title {
+            color: #333;
+            margin: 10px 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .note {
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-size: 13px;
+            border: 1px solid #90caf9;
+            line-height: 1.5;
+        }
+        .setup-steps {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .setup-steps ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .setup-steps li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="mockup-container">
+        <div class="ai-badge">🤖 AI Mockup Preview</div>
+        <h2 class="product-title"> Hoodie</h2>
+        <div class="product-outline">
+            <div class="design-area">
+                logo
+            </div>
+        </div>
+        <div class="prompt-display">
+            <strong>Your Design Vision:</strong><br>
+            "logo"
+        </div>
+        <div class="note">
+            <strong>🤖 AI Image Generation Setup Required</strong>
+            <div class="setup-steps">
+                <p>To generate real AI images, you need a free Hugging Face API key:</p>
+                <ol>
+                    <li>Go to <strong>https://huggingface.co/settings/tokens</strong></li>
+                    <li>Create a free account if you don't have one</li>
+                    <li>Generate a new token (select "Read" permissions)</li>
+                    <li>Add it to your <code>backend/.env</code> file: <code>HUGGINGFACE_API_KEY=your_token_here</code></li>
+                    <li>Restart the backend server</li>
+                </ol>
+                <p><em>This preview shows what your AI-generated mockup would look like!</em></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

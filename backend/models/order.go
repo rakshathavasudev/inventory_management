@@ -20,7 +20,9 @@ type Order struct {
 
 type Asset struct {
     ID        uint   `gorm:"primaryKey"`
-    OrderID  uint
-    LogoURL  string
+    OrderID   uint
+    LogoURL   string
     MockupURL string
+    AIGenerated bool `gorm:"default:false"`
+    AIPrompt    string
 }

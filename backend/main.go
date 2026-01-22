@@ -1,15 +1,23 @@
 package main
 
 import (
+    "log"
+    "os"
     "time"
-    "minicronk/db"
-    "minicronk/handlers"
-    "minicronk/models"
+    "printflow/db"
+    "printflow/handlers"
+    "printflow/models"
 
     "github.com/gin-gonic/gin"
+    "github.com/joho/godotenv"
 )
 
 func main() {
+    // Load environment variables
+    if err := godotenv.Load(); err != nil {
+        log.Println("No .env file found, using system environment variables")
+    }
+
     db.Connect()
     db.DB.AutoMigrate(&models.Order{}, &models.Asset{})
 
@@ -38,7 +46,9 @@ func main() {
     r.GET("/orders", handlers.ListOrders)
     r.GET("/orders/:ID", handlers.GetOrder)
     r.POST("/orders/:ID/approve", handlers.ApproveOrder)
+    r.POST("/orders/:ID/mockup", handlers.GenerateMockupHandler)
 	r.POST("/orders/:ID/label", handlers.GenerateLabel)
+	r.GET("/colors", handlers.GetAvailableColors)
 
 
     
@@ -53,7 +63,12 @@ func main() {
 
 
 
-    r.Run(":8080")
+    port := os.Getenv("PORT")
+    if port == "" {
+        port = "8080"
+    }
+
+    r.Run(":" + port)
 }
 
 

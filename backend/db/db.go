@@ -5,13 +5,13 @@ import (
 
     "github.com/glebarez/sqlite"
     "gorm.io/gorm"
-    "minicronk/models"
+    "printflow/models"
 )
 
 var DB *gorm.DB
 
 func Connect() {
-    database, err := gorm.Open(sqlite.Open("minicronk.db"), &gorm.Config{})
+    database, err := gorm.Open(sqlite.Open("printflow.db"), &gorm.Config{})
     if err != nil {
         log.Fatal("failed to connect database")
     }
